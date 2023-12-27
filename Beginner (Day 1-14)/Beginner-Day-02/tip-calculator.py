@@ -20,6 +20,7 @@ new_percentage = percentage / 100
 tip = total_bill * new_percentage
 new_total_bill = (total_bill + tip) / people
 round_total_bill = round(new_total_bill,2)
+round_total_bill = "{:.2f}".format(new_total_bill)
 
 #4. To print the results
 print(f"\033[0;32mEach person should pay:\033[0m ₱{round_total_bill}")

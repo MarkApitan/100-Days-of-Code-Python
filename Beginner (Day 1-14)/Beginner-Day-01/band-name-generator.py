@@ -1,4 +1,4 @@
-border = ("---------------------------------------------------")
+border = ("\033[0;36m---------------------------------------------------\033[0m")
 #1. Create a greeting for your program.
 print (border)
 print("\t\033[0;35mWelcome to the Band Name Generator\033[0m")
@@ -19,7 +19,7 @@ print ("\033[0;34mOption 1:\033[0m " + city + " " + pet )
 print ("\033[0;34mOption 2:\033[0m " + animal + " " + pet )
 print ("\033[0;34mOption 3:\033[0m " + city + " " + animal )
 
-#5. Thank you greeting of the progra,
+#5. Thank you greeting of the program
 print(border)
 print("\033[0;33mThank you for using Band Name Generator!\033[0m")
 print(border)

@@ -124,3 +124,5 @@ while True:
         print ("\033[0;31mGame Over! You Lose\033[0m")
         print (border)
         break
+print("\033[0;33mThank you for using Rock Paper Scissors Game!\033[0m")
+print(border)

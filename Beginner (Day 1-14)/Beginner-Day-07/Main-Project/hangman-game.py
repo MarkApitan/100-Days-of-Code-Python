@@ -52,17 +52,13 @@ while not end_of_game:
                 
                 print(f"The word is \033[0;36m{chosen_word}\033[0m")
                 print("\033[0;31mYou lose.\033[0m")
-                
-            #Join all the elements in the list and turn it into a String.
     
-
             #Check if user has got all letters.
         if "_" not in display:
             end_of_game = True
             print(f"The word is \033[0;36m{chosen_word}\033[0m")
             print("\033[0;32mYou win.\033[0m")
 
-        
         print("\033[0;36m"+hangman_art.stages[lives])
         print(border)
     else:

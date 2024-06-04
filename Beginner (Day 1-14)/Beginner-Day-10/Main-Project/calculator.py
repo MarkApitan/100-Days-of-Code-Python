@@ -1,3 +1,6 @@
+from art import logo
+from clear import Clear
+
 def add(n1, n2):
     return n1 + n2
 
@@ -16,9 +19,10 @@ operations  = {"+": add,
                "/": divide}
 
 def calculator ():
-    end_of_program = False
 
-    n1 =  int(input("Enter First number: "))
+    print (logo)
+    end_of_program = False
+    n1 =  float(input("Enter First number: "))
 
     while end_of_program == False:
 
@@ -26,17 +30,18 @@ def calculator ():
         print ("'+' to add \n'-' to subtract \n'x' to multiply \n'/' to divide")
         symbol = str(input("\nEnter the operator you want to use: "))
 
-        n2 = int(input("\nEnter next number: "))
+        n2 = float(input("\nEnter next number: "))
 
         result = operations[symbol](n1,n2)
 
-        print (f"\n{n1} {symbol} {n2} = {result}")
+        print (f"\n{n1} {symbol} {n2} = {result:.2f}")
 
         print ("\nEnter the following letter corresponding to your choice:\n'y' to continue calculating\n'n' to start a new calculation\n'e' to exit the program")    
         choice = input("\nEnter your choice: ").lower()
         if choice == 'y':
             n1 = result
         elif choice == 'n':
+            Clear()
             calculator()
         else:
             print ("\nThank you for using the program!")

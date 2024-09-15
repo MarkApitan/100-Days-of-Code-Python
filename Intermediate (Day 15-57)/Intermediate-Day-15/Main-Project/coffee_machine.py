@@ -11,6 +11,22 @@ def report():
     print (f"Milk: {resources['milk']}")
     print (f"Coffee: {resources['coffee']}")
 
+# TODO 4: Check resources if sufficient
+def check_resources(prompt):
+    drink = promt
+    water_needed = MENU[f"{drink}"]['ingredients']['water']
+    milk_needed = MENU[f"{drink}"]['ingredients']['milk']
+    coffee_needed = MENU[f"{drink}"]['ingredients']['coffee']
+
+    water_left = resources['water']
+    milk_left = resources['milk']
+    coffee_left = resources['coffee']
+
+    if drink == 'espresso':
+        return water_needed <= water_left and coffee_needed <=coffee_left
+    elif drink == 'latte' or 'cappuccino':
+        return water_needed <= water_left and milk_needed <= milk_left and coffee_needed <=coffee_left
+
 # TODO 1: Promt user by asking "What would you like?"
 
 end_of_program = False

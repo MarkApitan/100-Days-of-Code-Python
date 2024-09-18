@@ -7,9 +7,9 @@ menu = Menu()
 coffee_maker = CoffeeMaker()
 
 is_on = True
+menu.print_menu()
 while is_on:
-    order = input("What would you like? (espresso/latte/capuccino): ").lower()
-
+    order = input("What would you like?: ").lower()
     if order == 'off':
         print("Shutting Down!")
         is_on = False

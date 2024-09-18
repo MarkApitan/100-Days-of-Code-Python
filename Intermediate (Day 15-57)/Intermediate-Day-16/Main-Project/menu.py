@@ -1,3 +1,8 @@
+from prettytable import PrettyTable
+table = PrettyTable()
+table.add_column("Pokemon Name", ["Pikachu", "Squirtle", "Charmander" ])
+table.add_column("Type", ["Electric", "Water", "Fire" ])
+
 class MenuItem:
     """Models each Menu Item."""
     def __init__(self, name, water, milk, coffee, cost):
@@ -32,3 +37,9 @@ class Menu:
             if item.name == order_name:
                 return item
         print("Sorry that item is not available.")
+    
+    def print_menu(self):
+        table = PrettyTable()
+        table.add_column("Name", ["Latte", "Espresso", "Cappucino" ])
+        table.add_column("Cost", ["$2.5", "$1.5", "$3" ])
+        print(table)

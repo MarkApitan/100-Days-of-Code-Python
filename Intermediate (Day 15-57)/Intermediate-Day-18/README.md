@@ -1,4 +1,4 @@
-# Day 8: Turtle and Graphical User Interface
+# Day 18: Turtle and Graphical User Interface
 
 ## Concept Learned
 - Turtle Graphics

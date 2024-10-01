@@ -9,4 +9,4 @@
 - Coordinates
 - Loops
 - OOP
-- Inheritance66788
+- Inheritance

@@ -2,6 +2,7 @@
 
 ## Main Project - Mail Merge
 Sample Mail
+
 ![image](https://github.com/user-attachments/assets/416bd898-ecbf-4dac-bdfc-87eaa48433a4)
 
 ## Added Highscore in Snake Game

@@ -40,10 +40,7 @@ while len(known_state) < 50:
         
     # If the user types 'Exit', save the missing states to a CSV file and exit
     elif str_answer == 'Exit':
-        missing_states = []
-        for state in state_name_list:
-            if state not in known_state:
-                missing_states.append(state)
+        missing_states = [state for state in state_name_list if state not in known_state]
         new_data = pandas.DataFrame(missing_states)
         new_data.to_csv("states_to_learn.csv")
         break

@@ -5,5 +5,5 @@
 
 ## Concept Learned
 - *args and **kwargs
-- History ogf GUI
+- History of GUI
 - Tkinter Basics

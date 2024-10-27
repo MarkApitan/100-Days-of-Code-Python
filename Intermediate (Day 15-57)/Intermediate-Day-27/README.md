@@ -1,10 +1,9 @@
 # Day 27: Tkinter, *args, **kwargs and Creating GUI Programs
 
 ## Main project - Miles to Kilometer Converter
-![image](https://github.com/user-attachments/assets/5db930ad-6513-45a7-a566-411659147615)
+![img.png](img.png)
 
 ## Concept Learned
 - *args and **kwargs
-- History of GUI
+- History ogf GUI
 - Tkinter Basics
-- Tkinter Layouts Manager

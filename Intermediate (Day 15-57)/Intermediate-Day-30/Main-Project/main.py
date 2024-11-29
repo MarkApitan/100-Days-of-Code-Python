@@ -26,14 +26,22 @@ def generate_password():
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save_password():
+    new_data = {website_entry.get():
+                    {"Email:": email_entry.get(),
+                     "Password:": password_entry.get()}
+                }
 
     if len(website_entry.get()) == 0 or len(password_entry.get()) == 0 or len(email_entry.get()) == 0:
         messagebox.showinfo("Error", "Please enter all fields")
     else:
 
         # write data to the file
+        with open("data.json", "r") as file:
+            data = json.load(file)
+            data.update(new_data)
+
         with open("data.json", "w") as file:
-            file.write(f"{str(website_entry.get()).title()} | {email_entry.get()} | {password_entry.get()}\n")
+            json.dump(data, file, indent=4)
 
             # deleting all the entries
             website_entry.delete(0, END)

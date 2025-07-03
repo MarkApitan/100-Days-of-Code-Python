@@ -34,18 +34,21 @@ def save_password():
     if len(website_entry.get()) == 0 or len(password_entry.get()) == 0 or len(email_entry.get()) == 0:
         messagebox.showinfo("Error", "Please enter all fields")
     else:
-
+        try: 
         # write data to the file
-        with open("data.json", "r") as file:
-            data = json.load(file)
-            data.update(new_data)
+            with open("data.json", "r") as file:
+                data = json.load(file)
+        except FileNotFoundError:
+            data = {}
+            
+        data.update(new_data)
 
         with open("data.json", "w") as file:
             json.dump(data, file, indent=4)
 
-            # deleting all the entries
-            website_entry.delete(0, END)
-            password_entry.delete(0, END)
+                # deleting all the entries
+        website_entry.delete(0, END)
+        password_entry.delete(0, END)
 
 
 # ---------------------------- UI SETUP ------------------------------- #
@@ -54,7 +57,7 @@ window.title('Password Manager')
 window.config(padx=50, pady=50)
 
 # Adding the logo img
-logo_img = (PhotoImage(file='logo.png'))
+logo_img = PhotoImage(file=r"c:\Users\User\OneDrive - Polytechnic University of the Philippines\Documents\100-Days-of-Code-Phyton\Intermediate (Day 15-57)\Intermediate-Day-30\Main-Project\logo.png")
 canvas = Canvas(width=200, height=200, highlightthickness=0)
 canvas.create_image(100,100, image=logo_img)
 canvas.grid(column=1, row=0)
